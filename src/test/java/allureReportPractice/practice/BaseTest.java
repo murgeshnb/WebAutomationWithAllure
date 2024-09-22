@@ -2,6 +2,7 @@ package allureReportPractice.practice;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +18,9 @@ public class BaseTest {
 
     @BeforeClass
     public void launchBrowser(){
-        this.driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        this.driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         ScreenshotListener.driver = driver;
 

@@ -16,7 +16,7 @@ public class LaunchBrowser extends BaseTest{
 
     @Test(description = "Launch Browser")
     public void test1() throws InterruptedException {
-        By bookDemoButton = RelativeLocator.with(By.xpath("//button[.='Book a Dem']")).toRightOf(By.xpath("//a[.='Login']"));
+        By bookDemoButton = RelativeLocator.with(By.xpath("//button[.='Book a Demo']")).toRightOf(By.xpath("//a[.='Login']"));
         driver.findElement(bookDemoButton).click();
         System.out.println("Clicked on demo");
         Thread.sleep(2000);
