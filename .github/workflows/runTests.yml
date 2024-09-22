@@ -4,9 +4,12 @@
 name: Web Automation
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'which environment to deploy to'
+        required: true
+        default: 'production'
 
 jobs:
   test:
