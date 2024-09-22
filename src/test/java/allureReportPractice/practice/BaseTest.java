@@ -23,8 +23,6 @@ public class BaseTest {
         this.driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         ScreenshotListener.driver = driver;
-
-        driver.get("https://www.lambdatest.com/intl/en-in");
     }
 
     @BeforeMethod
