@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sun Sep 22 14:03:15 GMT 2024","Sun Sep 22 14:03:16 GMT 2024","768","Web Auto Allure report","sample web tests","allureReportPractice.practice.LaunchBrowser","allureReportPractice.practice.LaunchBrowser","test2","test2",""
+"passed","Sun Sep 22 14:03:12 GMT 2024","Sun Sep 22 14:03:15 GMT 2024","2687","Web Auto Allure report","sample web tests","allureReportPractice.practice.LaunchBrowser","allureReportPractice.practice.LaunchBrowser","test1","Launch Browser",""
