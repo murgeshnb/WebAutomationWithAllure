@@ -1,0 +1,1 @@
+[{"uid":"f0a35ca704abcd2e","name":"Launch Browser","time":{"start":1727016675270,"stop":1727016677874,"duration":2604},"status":"passed","severity":"normal"},{"uid":"b1c08a15829b1029","name":"test2","time":{"start":1727016678151,"stop":1727016678823,"duration":672},"status":"failed","severity":"normal"}]
