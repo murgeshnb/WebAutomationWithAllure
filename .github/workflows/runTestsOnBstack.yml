@@ -1,4 +1,4 @@
-name: Run Tests Local
+name: Run Tests on BrowserStack
 
 on:
   workflow_dispatch:
@@ -13,6 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 'BrowserStack env setup'
+        uses: browserstack/github-actions/setup-env@master
+        with:
+          username: ${{ secrets.BROWSERSTACK_USERNAME }}
+          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+
+      - name: BrowserStack Local tunnel setup
+        uses: browserstack/github-actions/setup-local@master
+        with:
+          local-testing: start
+          local-identifier: random
+
       - name: checkout repository
         uses: actions/checkout@v4
 
@@ -30,7 +42,12 @@ jobs:
           cache: 'maven'
 
       - name: Run selenium Tests
-        run: mvn clean test -P localExecution
+        run: mvn clean test -P browserstack
+
+      - name: BrowserStack local stop
+        uses: browserstack/github-actions/setup-local@master
+        with:
+          local-tetsing: stop
 
       - name: Load Test Report History
         uses: actions/checkout@v3
